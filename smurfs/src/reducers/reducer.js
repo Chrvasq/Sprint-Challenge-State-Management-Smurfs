@@ -21,7 +21,8 @@ const reducer = (state = initialState, action) => {
     case GET_DATA_SUCCESS:
       return {
         ...state,
-        smurfs: action.payload
+        smurfs: action.payload,
+        isLoading: false
       };
     case GET_DATA_FAILURE:
       return {
@@ -29,8 +30,6 @@ const reducer = (state = initialState, action) => {
         error: action.payload,
         isLoading: false
       };
-    case ADD_SMURF:
-      console.log("Add Smurf");
     default:
       return state;
   }
