@@ -11,6 +11,11 @@ export const getData = () => dispatch => {
 
   axios
     .get("http://localhost:3333/smurfs")
-    .then(res => console.log())
+    .then(res =>
+      dispatch({
+        type: GET_DATA_SUCCESS,
+        payload: res.data
+      })
+    )
     .catch(err => console.log(err));
 };
