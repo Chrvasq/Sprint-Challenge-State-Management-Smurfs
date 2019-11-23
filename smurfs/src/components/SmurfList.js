@@ -9,7 +9,7 @@ const SmurfList = props => {
   }, []);
 
   return (
-    <div>
+    <div className='smurf-container'>
       {props.smurfs.map(smurf => {
         return <Smurf key={smurf.id} smurf={smurf} />;
       })}
